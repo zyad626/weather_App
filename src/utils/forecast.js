@@ -9,8 +9,8 @@ const forecast = (lat , long , callback)=>{
             callback('locataion not found!' , undefined)
         }
         else {
-            callback(undefined , response.body.currently.summary+' It is currently '+response.body.currently.temperature+' celsius '+' with '+response.body.currently.precipProbability+'% chance to rain'
-            )
+            callback(undefined , response.body.currently.summary+' It is currently '+response.body.currently.temperature+'C° '+' with '+response.body.currently.precipProbability+'% chance to rain'
+           +' and humidity of '+response.body.currently.humidity )
         }
     })
 }

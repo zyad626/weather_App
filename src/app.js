@@ -9,6 +9,8 @@ const publicDirectory =  path.join(__dirname , '../public')
 const partialsDirectory = path.join(__dirname , '../templates/partials')
 
 const app = express()
+const port = process.env.PORT || 5000
+
 //setup handelbars engine and views location
 app.set('view engine','hbs')
 app.set('views', path.join(__dirname, '../templates/views'))
@@ -71,6 +73,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen( 5000, ()=>{
-    console.log('Server running!')
+app.listen( port, ()=>{
+    console.log('Server running on port'+port)
 } )
